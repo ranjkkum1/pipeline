@@ -1,15 +1,14 @@
 pipeline {
     agent any
     stages {
-    stage('code checkout') {
-        steps {
-            checkout scm
-        }
-    }
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'date'
+                whateverFunction()
             }
         }
     }
+}
+
+void whateverFunction() {
+    sh 'ls /'
 }
